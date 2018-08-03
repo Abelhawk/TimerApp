@@ -5,7 +5,6 @@ class CreateNewTimer extends Component {
     render() {
         return (
             <div className="CreateNewTimer">
-                <div className='componentName'>CreateNewTimer</div>
                 <p className='plus'>
                     +
                 </p>

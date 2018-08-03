@@ -37,16 +37,16 @@ class Timer extends Component {
 
     render() {
         let startTimer = (!this.state.isRunning) ?
-            <button onClick={this.startTimer}>Start</button> : null;
+            <div className='start' onClick={this.startTimer}>Start</div> : null;
 
         let pauseTimer = (this.state.isRunning) ?
-            <button onClick={this.pauseTimer}>Pause</button> : null;
+            <div className='pause' onClick={this.pauseTimer}>Pause</div> : null;
 
         return (
             <div className="Timer">
-                <div className='componentName'>Timer</div>
                 <header>
-                    <div className='timerElement'>Timer: {this.state.time}</div>
+                    <h3>Timer:</h3>
+                    <div className='timerElement'>{this.state.time}</div>
                     {startTimer}
                     {pauseTimer}
                 </header>

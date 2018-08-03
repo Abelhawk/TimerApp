@@ -5,3 +5,11 @@ Components needed:
 3   addCard
 4   editCard
 5   container
+
+                                                          ,----->Timer
+                                                         /
+             ,----->EditContainer------>EditTimer-------<
+            /                                            \
+App -------<                                              `----->TimerForm
+            \
+             `----->T

@@ -51,3 +51,25 @@
     font-size: 6pt;
     float: left;
 }
+
+h3{
+    margin: 0;
+}
+
+.start{
+    border: 2px limegreen solid;
+    color: limegreen;
+}
+
+.pause{
+    border: 2px red solid;
+    color: red;
+}
+
+.start, .pause{
+    background-color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 5px;
+    margin-top: 10px;
+}
