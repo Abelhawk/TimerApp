@@ -66,10 +66,16 @@ h3{
     color: red;
 }
 
-.start, .pause{
+.start, .pause, .cancel, .submit{
     background-color: white;
     cursor: pointer;
     user-select: none;
     padding: 5px;
     margin-top: 10px;
+}
+
+.submit{
+    border: 2px lightskyblue solid;
+    color: lightskyblue;
+    margin-right: 4px;
 }
