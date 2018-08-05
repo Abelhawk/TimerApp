@@ -23,9 +23,9 @@ class TimerForm extends React.Component {
     render() {
         const submitText = this.props.id ? 'Update' : 'Create';
         return (
-            <div className='CardContainer'>
+            <div className='Card'>
                 <div className='field'>
-                    <label>Title</label>
+                    <label>Title: </label>
                     <input
                         type='text'
                         value={this.state.title}
@@ -33,7 +33,7 @@ class TimerForm extends React.Component {
                     />
                 </div>
                 <div className='field'>
-                    <label>Project</label>
+                    <label>Project: </label>
                     <input
                         type='text'
                         value={this.state.project}
@@ -45,12 +45,12 @@ class TimerForm extends React.Component {
                     onClick={this.handleSubmit}
                 >
                     {submitText}
-                    <div
-                        className='pause'
-                        onClick={this.props.onFormClose}
-                    >
-                        Cancel
                     </div>
+                <div
+                    className='cancel'
+                    onClick={this.props.onFormClose}
+                >
+                    Cancel
                 </div>
             </div>
         );

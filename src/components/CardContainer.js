@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import '../App.css';
-import Card from "./Card";
 import TimerForm from "./TimerForm";
 import CreateNewTimer from "./CreateNewTimer";
 
@@ -35,7 +34,12 @@ class CardContainer extends React.Component {
             );
         } else {
             return (
-                <CreateNewTimer/>
+                <div className="CreateNewTimer" onClick={this.handleFormOpen}
+                >
+                    <p className='plus'>
+                        +
+                    </p>
+                </div>
             )
         }
     }

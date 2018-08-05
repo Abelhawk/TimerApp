@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import Timer from "./Timer";
 
-class Card extends Component {
+class TimerList extends Component {
     render() {
         return (
             <div className="Card">
@@ -12,4 +12,4 @@ class Card extends Component {
     }
 }
 
-export default Card;
+export default TimerList;

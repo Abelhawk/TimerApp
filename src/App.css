@@ -34,7 +34,7 @@
 .plus {
     margin: auto;
     position: relative;
-    top: 30%;
+    top: 41%;
     transform: translateY(-50%);
 }
 .CreateNewTimer:hover {
@@ -78,4 +78,10 @@ h3{
     border: 2px lightskyblue solid;
     color: lightskyblue;
     margin-right: 4px;
+}
+
+.cancel{
+    border: 2px red solid;
+    color: red;
+    margin-top: 5px;
 }

@@ -6,6 +6,9 @@ no-undef, jsx-a11y/label-has-for, react/jsx-first-prop-new-line
 import React, {Component} from 'react';
 import '../App.css';
 import CardContainer from "./CardContainer";
+import TimerList from "./TimerList";
+import '../helpers.js';
+import '../client.js';
 
 class App extends Component {
     state = {
@@ -13,14 +16,14 @@ class App extends Component {
             {
                 title: 'Trying to get this app to work',
                 project: 'Homework',
-                id: 'x', //for now
+                id: Math.floor(Math.random() * 1000),
                 elapsed: 5456099,
                 since: Date.now(),
             },
             {
                 title: 'Chewing gum',
                 project: 'Killing time',
-                id: 'y',
+                id: Math.floor(Math.random() * 1000),
                 elapsed: 999988887,
                 since: null,
             },
@@ -35,14 +38,19 @@ class App extends Component {
     createTimer = (timer) => {
         const t = helpers.newTimer(timer);
         this.setState({
-           timers: this.state.timers.concat(t),
+            timers: this.state.timers.concat(t),
         });
     };
 
     render() {
         return (
             <div className="App">
-                <CardContainer/>
+                <TimerList
+                    timers={this.state.timers}
+                />
+                <CardContainer
+                    onFormSubmit={this.handleCreateFormSubmit}
+                />
             </div>
         );
     }
