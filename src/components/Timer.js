@@ -39,13 +39,12 @@ class Timer extends Component {
     }
 
     editTimer(){
-        this.setState({editFormOpen: true});
+        this.props.onEditFormOpen();
     }
 
     deleteTimer(){
         this.setState({active: false});
     }
-
     render() {
         let startTimer = (!this.state.isRunning) ?
             <div className='btn btn-success' onClick={this.startTimer}>Start</div> : null;

@@ -17,7 +17,7 @@ class TimerList extends React.Component {
             />
         ));
         return (
-            <div className="card">
+            <div>
                 {timers}
             </div>
         );

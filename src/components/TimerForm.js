@@ -25,33 +25,35 @@ class TimerForm extends React.Component {
     render() {
         const submitText = this.props.id ? 'Update' : 'Create';
         return (
-            <div className='form'>
-                <div className='form-group'>
-                    <label>Title: </label>
-                    <input className='form-control'
-                        type='text'
-                        value={this.state.title}
-                        onChange={this.handleTitleChange}
-                    />
-                </div>
-                <div className='form-group'>
-                    <label>Project: </label>
-                    <input className='form-control'
-                        type='text'
-                        value={this.state.project}
-                        onChange={this.handleProjectChange}
-                    />
-                </div>
-                <div className='btn btn-primary'
-                    onClick={this.handleSubmit}
-                >
-                    {submitText}
+            <div className='card'>
+                <div className='card-body'>
+                    <div className='form-group'>
+                        <label>Title: </label>
+                        <input className='form-control'
+                               type='text'
+                               value={this.state.title}
+                               onChange={this.handleTitleChange}
+                        />
                     </div>
-                <div
-                    className='btn btn-danger'
-                    onClick={this.props.onFormClose}
-                >
-                    Cancel
+                    <div className='form-group'>
+                        <label>Project: </label>
+                        <input className='form-control'
+                               type='text'
+                               value={this.state.project}
+                               onChange={this.handleProjectChange}
+                        />
+                    </div>
+                    <div className='btn btn-primary'
+                         onClick={this.handleSubmit}
+                    >
+                        {submitText}
+                    </div>
+                    <div
+                        className='btn btn-danger'
+                        onClick={this.props.onFormClose}
+                    >
+                        Cancel
+                    </div>
                 </div>
             </div>
         );
