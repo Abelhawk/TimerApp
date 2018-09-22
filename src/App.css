@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    border: 1px #b3b3b3 dashed;
+    /*border: 1px #b3b3b3 dashed;*/
     padding: 5px;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .CardContainer {
-    border: 1px #b3b3b3 dashed;
+    /*border: 1px #b3b3b3 dashed;*/
     margin: 5px auto 5px auto;
 }
 

@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import '../App.css';
 import TimerForm from "./TimerForm";
-import CreateNewTimer from "./CreateNewTimer";
 
-//For all in tents and porpoises, this is "ToggleableTimerForm."
+//For awl in tents and porpoises, this is "ToggleableTimerForm."
 
 class CardContainer extends React.Component {
     state = {
@@ -34,12 +33,10 @@ class CardContainer extends React.Component {
             );
         } else {
             return (
-                <div className="CreateNewTimer" onClick={this.handleFormOpen}
+                <button className="btn btn-primary" onClick={this.handleFormOpen}
                 >
-                    <p className='plus'>
-                        +
-                    </p>
-                </div>
+                    New Timer
+                </button>
             )
         }
     }

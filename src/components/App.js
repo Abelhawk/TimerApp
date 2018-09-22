@@ -7,7 +7,7 @@ import React, {Component} from 'react';
 import '../App.css';
 import CardContainer from "./CardContainer";
 import TimerList from "./TimerList";
-import '../helpers.js';
+import helpers from '../helpers.js';
 import '../client.js';
 
 class App extends Component {
@@ -27,7 +27,6 @@ class App extends Component {
                 elapsed: 999988887,
                 since: null,
             },
-
         ],
     };
 

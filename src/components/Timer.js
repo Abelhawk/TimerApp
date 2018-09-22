@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import '../App.css';
+import helpers from '../helpers.js';
 
 class Timer extends Component {
-
-    constructor(props){
+    constructor(props) {
         super(props);
         this.startTimer = this.startTimer.bind(this);
         this.pauseTimer = this.pauseTimer.bind(this);
@@ -18,9 +18,9 @@ class Timer extends Component {
 
     startTimer() {
         this.setState({
-           time: this.state.time,
-           start: Date.now() - this.state.time,
-           isRunning: true
+            time: this.state.time,
+            start: Date.now() - this.state.time,
+            isRunning: true
         });
         this.timer = setInterval(() => this.setState({
             time: Date.now() - this.state.start
@@ -29,7 +29,7 @@ class Timer extends Component {
 
     }
 
-    pauseTimer(){
+    pauseTimer() {
         this.setState({isRunning: false});
         console.log(this.state.isRunning);
         clearInterval(this.timer)
@@ -37,22 +37,26 @@ class Timer extends Component {
 
     render() {
         let startTimer = (!this.state.isRunning) ?
-            <div className='start' onClick={this.startTimer}>Start</div> : null;
+            <div className='btn btn-success' onClick={this.startTimer}>Start</div> : null;
 
         let pauseTimer = (this.state.isRunning) ?
-            <div className='pause' onClick={this.pauseTimer}>Pause</div> : null;
+            <div className='btn btn-warning' onClick={this.pauseTimer}>Pause</div> : null;
 
         return (
-            <div className="Timer">
-                <header>
-                    <h3>Timer:</h3>
-                    <div className='timerElement'>{this.state.time}</div>
+            <div className="card">
+                <div className="card-body">
+                    <h4 className="card-title">{this.props.title}</h4>
+                    <h5 className="card-title">{this.props.project}</h5>
+                    {helpers.millisecondsToHuman(this.state.time)}
+                    <div>
                     {startTimer}
                     {pauseTimer}
-                </header>
+                    </div>
+                </div>
             </div>
         );
     }
 }
+
 
 export default Timer;
