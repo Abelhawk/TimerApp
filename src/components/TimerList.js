@@ -13,11 +13,11 @@ class TimerList extends React.Component {
                 project={timer.project}
                 elapsed={timer.elapsed}
                 since={timer.since}
+                active={timer.active}
             />
         ));
         return (
             <div className="card">
-                <Timer/>
                 {timers}
             </div>
         );

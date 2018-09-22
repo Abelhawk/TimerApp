@@ -15,6 +15,7 @@ class EditableTimer extends React.Component {
                     id={this.props.id}
                     title={this.props.title}
                     project={this.props.project}
+                    active={this.props.active}
                 />
             );
         } else {
@@ -25,6 +26,7 @@ class EditableTimer extends React.Component {
                     project={this.props.project}
                     elapsed={this.props.elapsed}
                     since={this.props.since}
+                    active={this.props.active}
                 />
             );
         }

@@ -19,6 +19,7 @@ class App extends Component {
                 id: Math.floor(Math.random() * 1000),
                 elapsed: 5456099,
                 since: Date.now(),
+                active: true
             },
             {
                 title: 'Chewing gum',
@@ -26,6 +27,7 @@ class App extends Component {
                 id: Math.floor(Math.random() * 1000),
                 elapsed: 999988887,
                 since: null,
+                active: true
             },
         ],
     };

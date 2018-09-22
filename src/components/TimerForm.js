@@ -4,6 +4,7 @@ class TimerForm extends React.Component {
     state = {
         title: this.props.title || '',
         project: this.props.project || '',
+        active: this.props.active || true
     };
 
     handleTitleChange = (e) => {
@@ -17,6 +18,7 @@ class TimerForm extends React.Component {
             id: this.props.id,
             title: this.state.title,
             project: this.state.project,
+            active: this.state.active
         });
     };
 
